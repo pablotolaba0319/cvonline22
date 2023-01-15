@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
+
+*{
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-weight: 600;
+    /*outline: 1px solid red;*/
+}
+
+body {
+    background-color: #d1d1d1;
+}
+
+a {text-decoration: none; color: rgb(255, 255, 255);}
+
+#all {
+    background-color: white;
+    max-width: 100%;
+    border-radius: 0px 15px 0px 0px;
+    border-top: 0 black;
+    border-left: 1px solid black;
+    margin-top: 10px;
+}
+
+header {
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.3);
+    transition: height 1s;
+    background-color: rgb(209, 228, 224);
+    border-radius: 0px 0px 30px 30px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    border-left: 0.5px solid black;
+    border-right: 0.5px solid black;
+}
+
+.navbar {
+    font-size: 20px;
+    box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.4);
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: auto;
+    padding: 10px 0px 10px 0px;
+    background-color: rgb(0, 0, 0);
+    border-bottom-style: solid;
+    border-color: rgb(0, 0, 0);
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/wallpaper1.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.navbar nav {
+    padding: 5px 0px 5px 0px;
+    width: 100%;
+}
+
+.navbar nav a {
+    transition: background-color 0.15s;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.navbar nav a:hover {
+    color: rgb(0, 255, 255);
+    background-color: rgba(184, 184, 184, 0.5);
+}
+
+#bienvenida {
+    background-color: rgb(188, 204, 201);
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 7.5px;
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    text-align: center;
+}
+
+.presyfoto {
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+}
+
+
+#fotoCV {
+    padding: 10px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#foto-perfil {
+    border-radius: 500px;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.3);
+    transition: content 1s;
+}
+
+#datosCV {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0px 10px 0px;
+}
+
+#datosCV div {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+#desc {
+    margin: auto;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+
+#desc-text {
+    box-shadow: 0px 8px 5px 1px rgba(0,0,0,0.3);
+    display: none;
+    transform: translateY(-2px);
+    z-index: 2;
+    background-color: rgb(209, 228, 224);
+    max-width: 100%;
+    margin: auto;
+    padding: 5px 5px 5px 5px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#dbutton {
+    box-shadow: 0px 8px 5px 1px rgba(0,0,0,0.3);
+    z-index: 2;
+    background-color: rgb(209, 228, 224);
+    transform: translateY(-2px);
+    height: 35px;
+    font-size: 25px;
+    width: 100%;
+    transition: transform 1s;
+    transition: background-color 0.25s;
+    border-radius: 0px 0px 20px 20px;
+    border-top: 0px solid rgb(0, 0, 0);
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    cursor: pointer;
+}
+
+#dbutton:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(163, 185, 181);
+}
+
+.icon {
+    padding-right: 2px;
+    width: 20px;
+    height: auto;
+}
+/*PESTAÑAS Y BOTONES: CONOCIMIENTO / APTITUDES / EXPERIENCIAS - INICIO*/
+#c-text-container {
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    background-image: linear-gradient(to right, white, rgb(157, 231, 215));
+    border-radius: 0 15px 0 0;
+    border-top: 2px solid black;
+    border-right: 1px solid black;
+}
+
+#Conocimiento-text {
+    z-index: 0;
+    position: absolute;
+    top: auto;
+    right: 20%;
+    height: fit-content;
+    transition: opacity 0.5s ease;
+}
+
+#a-text-container {
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    background-image: linear-gradient(to right, white, rgb(183, 157, 231));
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#Aptitudes-text {
+    z-index: 0;
+    position: absolute;
+    top: auto;
+    right: 20%;
+    height: fit-content;
+    transition: opacity 0.5s ease;
+}
+
+#exp-text-container {
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    background-image: linear-gradient(to right, white, rgb(231, 193, 157));
+    border-radius: 0 0 15px 0;
+    border-bottom: 2px solid black;
+    border-right: 1px solid black;
+}
+
+#Experiencias-text {
+    z-index: 0;
+    position: absolute;
+    top: auto;
+    right: 20%;
+    height: fit-content;
+    transition: opacity 0.5s ease;
+}
+
+#c-text input, #a-text input, #exp-text input {
+    font-size: 25px;
+    z-index: 1;
+    width: 40px;
+    background-color: rgba(255, 255, 255,0.3);
+    transition: background-color 0.25s;
+    border: 0;
+    border-right: 2px solid black;
+    cursor: pointer;
+}
+
+#c-text input {border-radius: 0 15px 0 0;}
+#exp-text input {border-radius: 0 0 15px 0;}
+
+#c-text input:hover, #a-text input:hover, #exp-text input:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#c-text, #a-text, #exp-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1;
+    transform: translateX(-87%);
+    width: 100%;
+    transition: transform 1s ease;
+    margin: auto;
+}
+
+#c-text { background-color: rgb(255, 255, 255, 0.25);}
+
+#c-list, #a-list,#exp-list {
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+    margin: auto;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+ul{ width: 100%;}
+h4{ padding-right: 10px; padding-left: 10px; padding-top: 5px; padding-bottom: 5px;}
+
+/*PESTAÑAS Y BOTONES: CONOCIMIENTO / APTITUDES / EXPERIENCIAS - FINAL*/
+
+#extrabuttons-container { margin: 15px 0 15px 0; margin-left: auto; margin-right: auto;}
+
+/* FORMULARIO - INICIO */
+
+#form-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to right, white, rgb(100, 255, 255));
+    max-width: 400px;
+    width: 100%;
+    border-radius: 20px 20px 20px 20px;
+    margin-bottom: 7.5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#form-button {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px solid black;
+    padding: 0 5px 0 5px;
+    width: 100%;
+    font-size: 18px;
+    padding: 0 20px 0 20px;
+    cursor: pointer;
+    transition: border-radius 0.25s ease;
+}
+
+#form-button:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+#email-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 398px;
+    width: 100%;
+    border: 1px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 0 0 20px 20px;
+}
+
+#email-form input, textarea{
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 16px;
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#email-form input { height: 40px;}
+
+#email-form textarea::after {
+    display: none;
+}
+
+#send-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-image 0.25s ease;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+}
+
+#send-button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#download-pdf, #form-button { height: 50px;}
+
+#download-pdf {
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 16px;
+}
+
+#sendemail-icon { width: auto;height: 40px;}
+
+/* FORMULARIO - FINAL */
+
+/* BOTÓN PDF - INICIO */
+
+#pdf-download-container {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to right, white, rgb(255, 0, 0));
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px 20px 20px 20px;
+    margin-top: 7.5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#download-pdf {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px solid black;
+    padding: 0 5px 0 5px;
+    width: 100%;
+    font-size: 18px;
+    padding: 0 20px 0 25px;
+    transition: background-image 0.25s ease;
+    cursor: pointer;
+}
+
+#download-pdf:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#download-pdf-icon {
+    height: 30px;
+    width: auto;
+    padding: 0 5px 0 5px;
+}
+
+/*BOTÓN PDF - FINAL*/
+
+footer {
+    color: white;
+    font-size: 16px;
+    padding: 10px 0 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color:rgb(49, 49, 49);
+}
+
+footer span {
+    width: fit-content;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+footer a{ transition: background-color 0.15s; }
+
+footer a:hover { color: rgb(0, 255, 255); }
+
+@media screen and (max-width: 374px) {
+
+    .navbar {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #bienvenida {padding-top: 135px; font-size: 22px;}
+
+    .presyfoto {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        max-width: 250px;
+        font-size: 16px;
+    }
+
+    #foto-perfil { width: 90px; }
+    #datosCV div { padding-top: 5px; padding-bottom: 5px;}
+    #dbutton {height: 35px;}
+    #desc { font-size: 15px; max-width: 200px;}
+
+    #c-text input, #a-text input, #exp-text input { width: 40px; }
+    #Conocimiento-text, #Aptitudes-text,#Experiencias-text { font-size: 16px; }
+    h4 {font-size: 15px;}
+
+    .icon {
+        padding-right: 5px;
+        width: 20px;
+    }
+
+    #extrabuttons-container { max-width: 250px;}
+    
+    #form-button-container { max-width: 250px;}
+    #form-button {font-size: 16px;}
+
+    #email-form { max-width: 248px;}
+    #email-form input { height: 45px;}
+    #sendemail-icon {height: 20;}
+
+    #pdf-download-container { max-width: 250px;}
+    #download-pdf { font-size: 14px;}
+    #download-pdf-icon {height: 20;}
+    
+    footer { font-size: 16px;}
+    
+}
+
+/* CELULAR PEQUEÑO */
+@media screen and (max-width: 479px) and (min-width:375px) {
+
+    header {border-radius: 0px 0px 10px 10px;}
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    #bienvenida {
+        font-size: 24px;
+        padding-top: 150px;
+    }
+    
+    .presyfoto {
+        margin: auto;
+        font-size: 16px;
+    }
+
+    #foto-perfil {
+        margin-right: 10px;
+        width: 100px;
+        height: auto;
+    }
+
+
+    #dbutton { height: 35px;}
+
+    #desc {max-width: 350px;}
+
+    #datosCV {padding: 20px 0px 20px 0px;}
+
+    #c-text input, #a-text input, #exp-text input { width: 45px }
+    
+    #Conocimiento-text, #Aptitudes-text,#Experiencias-text { font-size: 20px; }
+
+}
+
+/* CELULAR MEDIANO */
+@media screen and (max-width: 600px) and (min-width:480px) {
+    
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        font-size: 22px;
+    }
+    
+    #bienvenida {
+        padding-top: 155px;
+    }
+
+    .presyfoto {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        max-width: 500px;
+        margin: auto;
+        font-size: 20px;
+    }
+
+    #foto-perfil {
+        width: 150px;
+        margin-right: 15px;  
+    }
+    
+    
+    #dbutton { height: 40px;}
+
+    #desc { font-size: 18px }
+
+    .icon {
+        padding-right: 2px;
+        width: 25px;
+    }
+
+    #c-text input, #a-text input, #exp-text input { width: 50px; }
+
+    #Conocimiento-text, #Aptitudes-text,#Experiencias-text { font-size: 22px; }
+
+    h4 { font-size: 18px;}
+
+    #form-button {font-size: 20px;}
+
+    #email-form input { height: 45px;}
+
+    #download-pdf { font-size: 20px;}
+
+    footer { font-size: 18px;}
+
+}
+
+/* TABLET */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        font-size: 22px;
+    }
+    
+    #bienvenida {padding-top: 155px ;}
+
+    .presyfoto {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        max-width: 600px;
+        margin: auto;
+        font-size: 20px;
+    }
+
+    #foto-perfil {
+        width: 175px;
+        margin-right: 15px;  
+    }
+    #dbutton { height: 50px;}
+    #desc { font-size: 18px; max-width: 500px;}
+
+    .icon {
+        padding-right: 5px;
+        width: 25px;
+    }
+    
+    #c-text input, #a-text input, #exp-text input { width: 60px; }
+    h4 { font-size: 18px;}
+    
+    #extrabuttons-container { max-width: 600px;}
+
+    #form-button-container { max-width: 600px;}
+    #form-button {font-size: 20px;}
+
+    #email-form { max-width: 598px;}
+    #email-form input { height: 45px;}
+
+    #pdf-download-container { max-width: 600px;}
+    #download-pdf { font-size: 20px;}
+    
+    footer { font-size: 18px;}
+
+}
+
+/* NETBOOK */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .navbar nav a {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        height: 100%;
+        font-size: 22px;
+    }
+
+    #bienvenida {padding-top: 135px; font-size: 30px;}
+
+    .presyfoto {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        max-width: 800px;
+        font-size: 22px;
+    }
+
+    #foto-perfil { width: 200px; margin-right: 15px; }
+    #datosCV div { padding-top: 5px; padding-bottom: 5px;}
+    #dbutton {height: 50px;}
+    #desc { font-size: 20px; max-width: 700px;}
+
+    #c-text input, #a-text input, #exp-text input { width: 60px; }
+    #Conocimiento-text, #Aptitudes-text,#Experiencias-text { font-size: 28px; }
+    h4 {font-size: 20px;}
+
+    .icon {
+        padding-right: 5px;
+        width: 30px;
+    }
+
+    #extrabuttons-container { max-width: 700px;}
+    
+    #form-button-container { max-width: 700px;}
+    #form-button {font-size: 20px;}
+
+    #email-form { max-width: 698px;}
+    #email-form input { height: 45px;}
+
+    #pdf-download-container { max-width: 700px;}
+    #download-pdf { font-size: 20px;}
+    
+    footer { font-size: 20px;}
+
+}
+
+/* ESCRITORIO */
+@media screen and (min-width: 1025px) {
+
+    .navbar nav a {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
+        font-size: 22px;
+    }
+
+    #bienvenida {padding-top: 110px; font-size: 34px;}
+
+    .presyfoto {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        max-width: 1000px;
+        font-size: 24px;
+    }
+
+    #foto-perfil { width: 250px; margin-right: 15px; }
+    #datosCV div { padding-top: 5px; padding-bottom: 5px;}
+    #dbutton {height: 50px;}
+    #desc { font-size: 22px; max-width: 900px;}
+
+    #c-text input, #a-text input, #exp-text input { width: 60px; }
+    #Conocimiento-text, #Aptitudes-text,#Experiencias-text { font-size: 32px; }
+    h4 {font-size: 24px;}
+
+    .icon {
+        padding-right: 5px;
+        width: 35px;
+    }
+
+    #extrabuttons-container { max-width: 900px;}
+    
+    #form-button-container { max-width: 900px;}
+    #form-button {font-size: 22px;}
+
+    #email-form { max-width: 898px;}
+    #email-form input { height: 45px;}
+
+    #pdf-download-container { max-width: 900px;}
+    #download-pdf { font-size: 22px;}
+    
+    footer { font-size: 22px;}
+
+}
